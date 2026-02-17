@@ -12,7 +12,7 @@ public class Priest : Hero
 
         DefenceSpells.Add(new Heal()); 
 
-        // Ability.Add(new Zing());
+        // FriendlyAbility.Add(new Zing());
 
     }
 }

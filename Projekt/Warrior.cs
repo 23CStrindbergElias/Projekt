@@ -10,6 +10,8 @@ public class Warrior: Hero
 
         Abilities.Add(new Flameslash());
 
+        
+
         // DefenceSpells.Add(new Fireball);
 
         

@@ -8,7 +8,7 @@ public class Thief : Hero
         AP = 25;
         MP = 10;
 
-        DefenceSpells.Add("Agility");
+        // DefenceSpells.Add("Agility");
 
     }    
 }

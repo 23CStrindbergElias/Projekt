@@ -47,6 +47,7 @@ Console.Clear();
 
 while (BossFightOver != true)
 {
+    Console.WriteLine($"Bossen har {Boss.HP} HP kvar.");
     for (int i = 0; i < Your_Party.Count(); i++)
     {
         Hero hero = Your_Party[i];
@@ -66,8 +67,8 @@ while (BossFightOver != true)
 
         hero.Do(Moves, Boss);
 
-        Console.WriteLine(Boss.HP);
-
+        Console.WriteLine($"Bossen har nu {Boss.HP} HP kvar.");
+        Console.WriteLine("Klicka ENTER för att fortsätta.");
         Console.ReadLine();
     }
 }

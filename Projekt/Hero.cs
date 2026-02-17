@@ -37,14 +37,33 @@ public class Hero
 
             if (Abilities[a - 1] is FriendlyAbility)
             {
-                // Visa lista med partymedlemmar
-                // Läs in siffra för vilken som ska vara target
+                for (int i = 0; Party.Count > i; i++)
+                {
+                    Console.WriteLine(Party[i]);
+                }
+                Console.WriteLine("Vem vill du använda din ability på?");
+                string s = Console.ReadLine();
+                int Val = int.Parse(s);
+                if (Val > Party.Count || Val < 0)
+                {
+                    
+                    while (Val > Party.Count || Val < 0)
+                    {
+                        Console.WriteLine("Du får varken skriva en siffra som är större eller mindre än Party-Size. (3)");
+                        Console.WriteLine("Vem vill du använda din ability på?");
+                        s = Console.ReadLine();
+                        Val = int.Parse(s);
+                        Console.Clear();
 
-                Abilities[a - 1].Use(this, Party[0]);
+                    }
+                }
+                
+                Abilities[a - 1].Use(this, Party[Val]);
             }
             else
             {
                 Abilities[a - 1].Use(this, enemy);
+
             }
         }
 
@@ -61,7 +80,7 @@ public class Hero
 
         if (thing == "Defend")
         {
-
+            
         }
 
         if (thing == "Do nothing")
