@@ -10,9 +10,9 @@ public class Mage : Hero
         AP = 15;
         MP = 100;
 
-        Spells.Add("Fireball"); 
-        Spells.Add("Iceshard");
-        Spells.Add("Kaboom");
+        DefenceSpells.Add("Fireball"); 
+        DefenceSpells.Add("Iceshard");
+        DefenceSpells.Add("Kaboom");
     }
 
 

@@ -1,3 +1,5 @@
+using Projekt;
+
 public class Priest : Hero
 {
     public Priest()
@@ -8,10 +10,9 @@ public class Priest : Hero
         AP = 5;
         MP = 60;
 
-        Spells.Add("Heal"); 
-        Spells.Add("Buff");
+        DefenceSpells.Add(new Heal()); 
 
-        Abilities.Add("Zing");
+        // Ability.Add(new Zing());
 
     }
 }

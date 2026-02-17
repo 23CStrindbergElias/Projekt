@@ -12,3 +12,4 @@ C:\Users\elias.strindberg\Documents\prog2\Projekt\Projekt\obj\Debug\net8.0\refin
 C:\Users\elias.strindberg\Documents\prog2\Projekt\Projekt\obj\Debug\net8.0\Projekt.pdb
 C:\Users\elias.strindberg\Documents\prog2\Projekt\Projekt\obj\Debug\net8.0\Projekt.genruntimeconfig.cache
 C:\Users\elias.strindberg\Documents\prog2\Projekt\Projekt\obj\Debug\net8.0\ref\Projekt.dll
+C:\Users\elias.strindberg\Documents\prog2\Projekt\Projekt\obj\Debug\net8.0\Projekt.sourcelink.json

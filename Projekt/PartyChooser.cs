@@ -33,6 +33,7 @@ public class PartyChooser
             {
                 Hero h = PotentialPartyMembers.Find(h => h.Name == choice);
                 party.Add(h);
+                h.Party = party;
                 Party_Members.Remove(choice);
                 Console.WriteLine($"{choice} har lagts till i party't!");
                 Console.WriteLine("Klickan ENTER för att fortsätta vidare:");

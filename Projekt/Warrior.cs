@@ -8,10 +8,9 @@ public class Warrior: Hero
         AP = 10;
         MP = 40;
 
-        Abilities.Add("Flameslash");
-        Abilities.Add("Dragonslash");
+        Abilities.Add(new Flameslash());
 
-        Spells.Add("Fireball");
+        // DefenceSpells.Add(new Fireball);
 
         
 

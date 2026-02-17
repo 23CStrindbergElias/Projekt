@@ -9,6 +9,7 @@
 
 // Variabler början
 
+using System.Diagnostics;
 using Projekt;
 
 int Party_Size = 0;
@@ -63,7 +64,9 @@ while (BossFightOver != true)
             Moves = Console.ReadLine();
         }
 
-        hero.Do(Moves);
+        hero.Do(Moves, Boss);
+
+        Console.WriteLine(Boss.HP);
 
         Console.ReadLine();
     }

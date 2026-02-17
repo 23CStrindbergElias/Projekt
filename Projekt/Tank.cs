@@ -7,8 +7,6 @@ public class Tank : Hero
         HP = 150;
         AP = 30;
         MP = 0;
-
-        Abilities.Add("Deterrent"); 
         
 
     }    
