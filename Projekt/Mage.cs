@@ -1,6 +1,3 @@
-using System.Security.Cryptography.X509Certificates;
-using Projekt;
-
 public class Mage : Hero
 {
     public Mage()
@@ -12,8 +9,8 @@ public class Mage : Hero
         MP = 100;
 
         OffenseSpells.Add(new Fireball()); 
-        // DefenceSpells.Add("Iceshard");
-        // DefenceSpells.Add("Kaboom");
+        OffenseSpells.Add(new Iceshard()); 
+        OffenseSpells.Add(new Kaboom()); 
     }
 
 

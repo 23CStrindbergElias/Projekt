@@ -52,6 +52,7 @@ while (BossFightOver != true)
     {
         Hero hero = Your_Party[i];
         Console.WriteLine($"Det är nu {hero.Name}s tur");
+        Console.WriteLine($"Stats för {hero}: MP = {hero.MP}, HP = {hero.HP}.");
         Console.WriteLine("Vad vill du göra?");
         hero.ListMoves();
         string Moves = Console.ReadLine();

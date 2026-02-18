@@ -9,6 +9,16 @@ public class OffenseSpells
         
     }
 
+    internal static void Add(Iceshard iceshard)
+    {
+        
+    }
+
+    internal static void Add(Kaboom kaboom)
+    {
+        
+    }
+
     public virtual void Use(Hero caster, Enemy enemy)
     {
         

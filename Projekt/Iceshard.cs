@@ -1,8 +1,8 @@
 using Projekt;
 
-public class Fireball : OffenseSpells
+public class Iceshard : OffenseSpells
 {
-    public Fireball()
+    public Iceshard()
     {
         Name = "Fireball";
         
@@ -10,8 +10,8 @@ public class Fireball : OffenseSpells
 
     public override void Use(Hero hero, Enemy enemy)
     {
-        Console.WriteLine($"Mage använde Fireball!");
-        enemy.HP -= 15;
+        Console.WriteLine($"Mage använde Iceshard!");
+        enemy.HP -= 10;
         hero.MP -= 5;
     }
 }
