@@ -36,7 +36,18 @@ public class Hero
             }
             Console.WriteLine("Skriv in en siffra");
             string Siffra = Console.ReadLine();
-            int a = int.Parse(Siffra);
+            int a = 0;
+
+            while (!int.TryParse(Siffra, out a))
+            {
+                Console.WriteLine($"Du får bara skriva en siffra som motsvarar ett party-member! (1-{Abilities.Count})");
+                for (int i = 0; i < Abilities.Count; i++)
+                {
+                    Console.WriteLine($"{i + 1}) {Abilities[i].Name}");
+                }
+                Console.WriteLine("Skriv in en siffra");
+                Siffra = Console.ReadLine();
+            }
 
             if (Abilities[a - 1] is FriendlyAbility)
             {
@@ -46,19 +57,19 @@ public class Hero
                 }
                 Console.WriteLine("Vem vill du använda din ability på?");
                 string s = Console.ReadLine();
-                int Val = int.Parse(s);
-                if (Val > Party.Count || Val < 0)
-                {
-                    while (Val > Party.Count || Val < 0)
-                    {
-                        Console.WriteLine("Du får varken skriva en siffra som är större eller mindre än Party-Size. (3)");
-                        Console.WriteLine("Vem vill du använda din ability på?");
-                        s = Console.ReadLine();
-                        Val = int.Parse(s);
-                        Console.Clear();
+                int Val = 0;
 
+                while (!int.TryParse(Siffra, out a))
+                {
+                    Console.WriteLine($"Du får bara skriva en siffra som motsvarar en party member! (1-{Party.Count})");
+                    for (int i = 0; i < Party.Count; i++)
+                    {
+                        Console.WriteLine($"{i + 1}) {Party[i].Name}");
                     }
+                    Console.WriteLine("Skriv in en siffra");
+                    Siffra = Console.ReadLine();
                 }
+
 
                 Abilities[a - 1].Use(this, Party[Val]);
             }
@@ -79,19 +90,24 @@ public class Hero
                 }
                 Console.WriteLine("Skriv in en siffra");
                 string Siffra = Console.ReadLine();
-                int a = int.Parse(Siffra);
-
-                Console.WriteLine("Vem vill du använda din spell på?");
-                for (int i = 0; i < Party.Count; i++)
+                int a = 0;
+                
+                while (!int.TryParse(Siffra, out a))
                 {
-                    Console.WriteLine($"{i + 1}) {Party[i]}");
+                    Console.WriteLine($"Du får bara skriva en siffra som motsvarar en spell! (1-{DefenceSpells.Count})");
+                    for (int i = 0; i < DefenceSpells.Count; i++)
+                    {
+                        Console.WriteLine($"{i + 1}) {DefenceSpells[i].Name}");
+                    }
+                    Console.WriteLine("Skriv in en siffra");
+                    Siffra = Console.ReadLine();
                 }
-                // Fixa så koden inte krashar när man skriver in bokstäver
-                string s = Console.ReadLine();
-                int Val = int.Parse(s);
-                DefenceSpells[a - 1].Use(this, Party[Val]);
 
+                Hero target = WrongMoveInput.ChoosePartyMember(Party);
+
+                DefenceSpells[a - 1].Use(this, target);
             }
+
             if (OffenseSpells.Count > 0)
             {
                 for (int i = 0; i < OffenseSpells.Count; i++)
@@ -100,7 +116,19 @@ public class Hero
                 }
                 Console.WriteLine("Skriv in en siffra");
                 string Siffra = Console.ReadLine();
-                int a = int.Parse(Siffra);
+                int a = 0;
+        
+                while (!int.TryParse(Siffra, out a))
+                {
+                    Console.WriteLine($"Du får bara skriva en siffra som motsvarar en spell! (1-{OffenseSpells.Count})");
+                    for (int i = 0; i < OffenseSpells.Count; i++)
+                    {
+                        Console.WriteLine($"{i + 1}) {OffenseSpells[i].Name}");
+                    }
+                    Console.WriteLine("Skriv in en siffra");
+                    Siffra = Console.ReadLine();
+                }
+
                 OffenseSpells[a - 1].Use(this, enemy);
             }
 
