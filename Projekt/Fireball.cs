@@ -10,7 +10,7 @@ public class Fireball : OffenseSpells
 
     public override void Use(Hero hero, Enemy enemy)
     {
-        Console.WriteLine($"Mage använde Fireball!");
+        Console.WriteLine($"{hero} använde Fireball!");
         enemy.HP -= 15;
         hero.MP -= 5;
     }

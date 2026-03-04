@@ -9,14 +9,8 @@ public class Warrior: Hero
         MP = 40;
 
         Abilities.Add(new Flameslash());
+        Abilities.Add(new NormalAttack());
 
-        
-
-        // DefenceSpells.Add(new Fireball);
-
-        
-
+        OffenseSpells.Add(new Fireball());
     }    
-
-
 }

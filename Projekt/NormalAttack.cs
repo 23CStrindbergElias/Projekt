@@ -1,8 +1,8 @@
 using Projekt;
 
-public class Flameslash : Ability
+public class NormalAttack : Ability
 {
-    public Flameslash()
+    public NormalAttack()
     {
         Name = "Flameslash";
         
@@ -11,7 +11,6 @@ public class Flameslash : Ability
     public override void Use(Hero hero, Enemy enemy)
     {
         Console.WriteLine($"Warrior använda Flameslash!");
-        hero.MP -= 5;
-        enemy.HP -= 15;
+        enemy.HP -= 10;
     }
 }

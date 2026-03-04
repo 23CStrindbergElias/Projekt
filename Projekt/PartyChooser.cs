@@ -1,8 +1,8 @@
 public class PartyChooser
 {
-    List<string> Party_Members = ["Warrior", "Mage", "Priest", "Thief", "Tank"];
+    List<string> Party_Members = ["Warrior", "Mage", "Priest"];
 
-    List<Hero> PotentialPartyMembers = [new Warrior(), new Mage(), new Priest(), new Thief(), new Tank()];
+    List<Hero> PotentialPartyMembers = [new Warrior(), new Mage(), new Priest()];
 
     public List<Hero> ChooseParty(int partyMaxSize)
     {

@@ -11,6 +11,8 @@ public class Hero
 
     public List<string> Moves = ["Attack", "Defend", "Spells", "Do nothing"];
     public List<DefenceSpells> DefenceSpells = [];
+    public List<OffenseSpells> OffenseSpells = [];
+
     public List<Ability> Abilities = [];
 
     public List<Hero> Party;
@@ -89,6 +91,17 @@ public class Hero
                 int Val = int.Parse(s);
                 DefenceSpells[a - 1].Use(this, Party[Val]);
 
+            }
+            if (OffenseSpells.Count > 0)
+            {
+                for (int i = 0; i < OffenseSpells.Count; i++)
+                {
+                    Console.WriteLine($"{i + 1}) {OffenseSpells[i].Name}");
+                }
+                Console.WriteLine("Skriv in en siffra");
+                string Siffra = Console.ReadLine();
+                int a = int.Parse(Siffra);
+                OffenseSpells[a - 1].Use(this, enemy);
             }
 
             else
