@@ -9,7 +9,7 @@ public class Hero
 
     public string description;
 
-    public List<string> Moves = ["Attack", "Defend", "Spells", "Do nothing"];
+    public List<string> Moves = ["Attack", "Spells", "Do nothing"];
     public List<DefenceSpells> DefenceSpells = [];
     public List<OffenseSpells> OffenseSpells = [];
 
@@ -91,7 +91,7 @@ public class Hero
                 Console.WriteLine("Skriv in en siffra");
                 string Siffra = Console.ReadLine();
                 int a = 0;
-                
+
                 while (!int.TryParse(Siffra, out a))
                 {
                     Console.WriteLine($"Du får bara skriva en siffra som motsvarar en spell! (1-{DefenceSpells.Count})");
@@ -103,9 +103,28 @@ public class Hero
                     Siffra = Console.ReadLine();
                 }
 
-                Hero target = WrongMoveInput.ChoosePartyMember(Party);
+                Console.WriteLine("Välj en av:");
 
-                DefenceSpells[a - 1].Use(this, target);
+                for (int i = 0; i < Party.Count; i++)
+                {
+                    Console.WriteLine($"{i + 1}) {Party[i]}");
+                }
+
+                string s = Console.ReadLine();
+                int Val = 0;
+
+                while (!int.TryParse(s, out Val))
+                {
+                    Console.WriteLine($"Du får bara skriva en siffra som motsvarar en i listan! (1-{Party.Count})");
+                    for (int i = 0; i < Party.Count; i++)
+                    {
+                        Console.WriteLine($"{i + 1}) {Party[i].Name}");
+                    }
+                    Console.WriteLine("Skriv in en siffra");
+                    s = Console.ReadLine();
+                }
+
+                DefenceSpells[a - 1].Use(this, Party[Val]);
             }
 
             if (OffenseSpells.Count > 0)
@@ -117,7 +136,7 @@ public class Hero
                 Console.WriteLine("Skriv in en siffra");
                 string Siffra = Console.ReadLine();
                 int a = 0;
-        
+
                 while (!int.TryParse(Siffra, out a))
                 {
                     Console.WriteLine($"Du får bara skriva en siffra som motsvarar en spell! (1-{OffenseSpells.Count})");
@@ -138,17 +157,11 @@ public class Hero
             }
         }
 
-        if (thing == "Defend")
-        {
-
-        }
-
         if (thing == "Do nothing")
         {
             Console.WriteLine("Du gör inget");
             Console.WriteLine("Klicka ENTER för att fortsätta:");
             Console.ReadLine();
-
         }
     }
 

@@ -2,6 +2,7 @@ using Projekt;
 
 public class Boss : Enemy
 {
+    public List<BossSpells> bossSpells = [];
     public Boss()
     {
         Name = "Boss";
@@ -9,8 +10,7 @@ public class Boss : Enemy
         AP = 20;
         MP = 50;
 
-        Spells.Add("GiantFire");
-        Spells.Add("IceStorm");
-
-    }    
+        bossSpells.Add(new Giantfire());
+        bossSpells.Add(new Icestorm());
+    }
 }

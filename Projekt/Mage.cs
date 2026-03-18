@@ -11,6 +11,8 @@ public class Mage : Hero
         OffenseSpells.Add(new Fireball()); 
         OffenseSpells.Add(new Iceshard()); 
         OffenseSpells.Add(new Kaboom()); 
+
+        Abilities.Add(new NormalAttack());
     }
 
 

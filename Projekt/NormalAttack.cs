@@ -4,13 +4,13 @@ public class NormalAttack : Ability
 {
     public NormalAttack()
     {
-        Name = "Flameslash";
+        Name = "Normal Attack";
         
     }
 
     public override void Use(Hero hero, Enemy enemy)
     {
-        Console.WriteLine($"Warrior använda Flameslash!");
-        enemy.HP -= 10;
+        Console.WriteLine($"{hero} använde Normal Attack!");
+        enemy.HP -= hero.AP;
     }
 }

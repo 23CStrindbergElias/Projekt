@@ -18,7 +18,7 @@ Bossfight bossfight = new();
 Bossfight fight = new();
 
 Your_Party = chooser.ChooseParty(3);
-WrongMoveInput.ChoosePartyMember(Your_Party);
+
 
 fight.NewFight(Your_Party);
 

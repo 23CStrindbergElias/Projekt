@@ -12,5 +12,7 @@ public class Warrior: Hero
         Abilities.Add(new NormalAttack());
 
         OffenseSpells.Add(new Fireball());
+
+        
     }    
 }

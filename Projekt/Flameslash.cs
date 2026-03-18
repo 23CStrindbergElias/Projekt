@@ -10,7 +10,7 @@ public class Flameslash : Ability
 
     public override void Use(Hero hero, Enemy enemy)
     {
-        Console.WriteLine($"Warrior använda Flameslash!");
+        Console.WriteLine($"Warrior använde {Name}");
         hero.MP -= 5;
         enemy.HP -= 15;
     }
