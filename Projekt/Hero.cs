@@ -154,6 +154,8 @@ public class Hero
             else
             {
                 Console.WriteLine("Du har inga spells.");
+                Console.WriteLine("Klicka ENTER för att fortsätta:");
+                Console.ReadLine();
             }
         }
 

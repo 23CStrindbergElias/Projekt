@@ -1,5 +1,3 @@
-using Projekt;
-
 public class Bossfight
 {
     bool BossFightOver = false;
@@ -10,35 +8,23 @@ public class Bossfight
         Console.WriteLine("Klicka på ENTER för att gå vidare:");
         Console.ReadLine();
         Console.Clear();
-
-        Enemy Boss = new Boss();
+        Boss boss = new Boss();
+        HeroTurn heroTurn = new HeroTurn();
         while (BossFightOver != true)
         {
-            Console.WriteLine($"Bossen har {Boss.HP} HP kvar.");
+            Console.WriteLine($"Bossen har {boss.HP} HP kvar.");
             for (int i = 0; i < Your_Party.Count(); i++)
             {
                 Hero hero = Your_Party[i];
-                Console.WriteLine($"Det är nu {hero.Name}s tur");
-                Console.WriteLine($"Stats för {hero}: MP = {hero.MP}, HP = {hero.HP}.");
-                Console.WriteLine("Vad vill du göra?");
-                hero.ListMoves();
-                string Moves = Console.ReadLine();
-                Console.Clear();
-
-                while (!hero.Moves.Contains(Moves))
-                {
-                    Console.Clear();
-                    Console.WriteLine("Du får inte skriva det. Skriv ett move igen.");
-                    hero.ListMoves();
-                    Moves = Console.ReadLine();
-                }
-
-                hero.Do(Moves, Boss);
-
-                Console.WriteLine($"Bossen har nu {Boss.HP} HP kvar.");
+                heroTurn.HerosTurn(hero, boss);
+                Console.WriteLine($"Bossen har nu {boss.HP} HP kvar.");
                 Console.WriteLine("Klicka ENTER för att fortsätta.");
                 Console.ReadLine();
             }
+            
+            int ChoiceHero = Random.Shared.Next(0, Your_Party.Count);
+
+            boss.BossTurn(Your_Party[ChoiceHero]);
         }
     }
 }
