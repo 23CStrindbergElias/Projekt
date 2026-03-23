@@ -17,14 +17,9 @@ Bossfight bossfight = new();
 
 Bossfight fight = new();
 
-Boss_turn boss_Turn = new();
-
 Your_Party = chooser.ChooseParty(3);
 
 fight.NewFight(Your_Party);
-
-
-
 
 Console.ReadLine();
 
