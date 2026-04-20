@@ -166,6 +166,4 @@ public class Hero
             Console.ReadLine();
         }
     }
-
-
 }
