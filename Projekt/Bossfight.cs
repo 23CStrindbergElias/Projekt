@@ -25,6 +25,13 @@ public class Bossfight
             int ChoiceHero = Random.Shared.Next(0, Your_Party.Count);
 
             boss.BossTurn(Your_Party[ChoiceHero]);
+
+            if (boss.HP <= 0)
+            {
+                Console.Clear();
+                BossFightOver = true;
+                Console.WriteLine("Du dödade bossen!");
+            }
         }
     }
 }

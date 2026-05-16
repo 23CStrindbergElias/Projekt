@@ -1,6 +1,6 @@
 public class WrongMoveInput
 {
-    public static Hero ChoosePartyMember(List<Hero> party)
+    public  Hero ChoosePartyMember(List<Hero> party)
     {
         Console.WriteLine("Välj en av:");
 

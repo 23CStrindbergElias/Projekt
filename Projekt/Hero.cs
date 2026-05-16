@@ -2,6 +2,7 @@ using Projekt;
 
 public class Hero
 {
+    // Allmäna variabler
     public string Name;
     public int HP;
     public int AP;
@@ -9,6 +10,7 @@ public class Hero
 
     public string description;
 
+    // Listor
     public List<string> Moves = ["Attack", "Spells", "Do nothing"];
     public List<DefenceSpells> DefenceSpells = [];
     public List<OffenseSpells> OffenseSpells = [];
@@ -25,11 +27,13 @@ public class Hero
         }
     }
 
+    // Alla moves som spelaren kan göra
     public void Do(string thing, Enemy enemy)
     {
+        // Attack
         if (thing == "Attack")
         {
-
+            // Räknar upp alla abilities 
             for (int i = 0; i < Abilities.Count; i++)
             {
                 Console.WriteLine($"{i + 1}) {Abilities[i].Name}");
@@ -38,6 +42,7 @@ public class Hero
             string Siffra = Console.ReadLine();
             int a = 0;
 
+            // Om man skriver in felaktigt
             while (!int.TryParse(Siffra, out a))
             {
                 Console.WriteLine($"Du får bara skriva en siffra som motsvarar ett party-member! (1-{Abilities.Count})");
@@ -48,6 +53,7 @@ public class Hero
                 Console.WriteLine("Skriv in en siffra");
                 Siffra = Console.ReadLine();
             }
+
 
             if (Abilities[a - 1] is FriendlyAbility)
             {

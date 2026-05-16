@@ -17,6 +17,7 @@ public class PartyChooser
         while (party.Count < partyMaxSize)
         {
             Console.WriteLine($"Du kan nu välja mellan: {string.Join(", ", Party_Members)}");
+            // Lägg till så description i varje hero klass skrivs ut
             Console.WriteLine($"Ditt nuvarande party innehåller: {string.Join(", ", party)}");
             Console.WriteLine("Skriv ned vilken medlem du vill lägga till:");
             choice = Console.ReadLine();

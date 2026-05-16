@@ -4,7 +4,7 @@ public class Iceshard : OffenseSpells
 {
     public Iceshard()
     {
-        Name = "Fireball";
+        Name = "Iceshard";
         
     }
 
