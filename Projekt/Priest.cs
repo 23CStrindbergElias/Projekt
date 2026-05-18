@@ -6,9 +6,10 @@ public class Priest : Hero
     {
         description = "The Priest is a defensive focused character. He's focused around healing and buffing his fellow member of the party.";
         Name = "Priest";
-        HP = 40;
-        AP = 5;
-        MP = 60;
+
+        Stats.Add("HP", 100);
+        Stats.Add("AP", 5);
+        Stats.Add("MP", 60);
 
         DefenceSpells.Add(new Heal()); 
 

@@ -3,7 +3,7 @@ public class HeroTurn
     public void HerosTurn(Hero hero, Boss boss)
     {
         Console.WriteLine($"Det är nu {hero.Name}s tur");
-        Console.WriteLine($"Stats för {hero}: MP = {hero.MP}, HP = {hero.HP}.");
+        Console.WriteLine($"Stats för {hero}: MP = {hero.Stats["MP"]}, HP = {hero.Stats["HP"]}.");
         Console.WriteLine("Vad vill du göra?");
         hero.ListMoves();
         string Moves = Console.ReadLine();

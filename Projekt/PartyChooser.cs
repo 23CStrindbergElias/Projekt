@@ -3,11 +3,15 @@ public class PartyChooser
     List<string> Party_Members = ["Warrior", "Mage", "Priest"];
 
     List<Hero> PotentialPartyMembers = [new Warrior(), new Mage(), new Priest()];
+    Queue<string> Intro = new();
+
 
     public List<Hero> ChooseParty(int partyMaxSize)
     {
-        Console.WriteLine("Välkommen till boss-fighten");
-        Console.WriteLine("Klicka ENTER för att gå vidare:");
+        Intro.Enqueue("Välkommen till boss-fighten");
+        Intro.Enqueue("Klicka ENTER för att gå vidare:");
+        Console.WriteLine(Intro.Dequeue());
+        Console.WriteLine(Intro.Dequeue());
         Console.ReadLine();
         Console.Clear();
         List<Hero> party = [];

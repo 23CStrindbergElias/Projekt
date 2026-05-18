@@ -4,9 +4,12 @@ public class Warrior: Hero
     {
         description = "The warrior is an allround useful character for all situation. He has a balance of good HP and high AP. A must for any party.";
         Name = "Warrior";
-        HP = 100;
-        AP = 10;
-        MP = 40;
+
+
+        Stats.Add("HP", 100);
+        Stats.Add("AP", 10);
+        Stats.Add("MP", 40);
+
 
         Abilities.Add(new Flameslash());
         Abilities.Add(new NormalAttack());

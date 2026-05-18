@@ -8,7 +8,7 @@ public class Heal : DefenceSpells
     public override void Use(Hero hero, Hero target)
     {
         Console.WriteLine($"Priest använde Heal!");
-        target.HP += 10;        
+        target.Stats["HP"] += 10;        
     }
 
 }

@@ -10,6 +10,6 @@ public class Giantfire : BossSpells
     public override void Use(Enemy enemy, Hero hero)
     {
         Console.WriteLine($"Boss använde {Name}");
-        hero.HP -= 15;
+        hero.Stats["HP"] -= 15;
     }
 }

@@ -19,7 +19,7 @@ public class Boss : Enemy
         int r = Random.Shared.Next(0, bossSpells.Count);
         bossSpells[r].Use(this, hero);
         Console.WriteLine($"Bossen använde {bossSpells[r].Name} på {hero.Name}");
-        Console.WriteLine($"{hero.Name} har nu {hero.HP} kvar!");
+        Console.WriteLine($"{hero.Name} har nu {hero.Stats["HP"]} kvar!");
         Console.WriteLine("Klicka ENTER för att fortsätta:");
         Console.ReadLine();
     }

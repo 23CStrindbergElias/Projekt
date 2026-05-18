@@ -12,6 +12,6 @@ public class Iceshard : OffenseSpells
     {
         Console.WriteLine($"Mage använde Iceshard!");
         enemy.HP -= 10;
-        hero.MP -= 5;
+        hero.Stats["MP"] -= 5;
     }
 }

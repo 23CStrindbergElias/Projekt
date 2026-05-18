@@ -12,6 +12,6 @@ public class Kaboom : OffenseSpells
     {
         Console.WriteLine($"Mage använde Kaboom!");
         enemy.HP -= 20;
-        hero.MP -= 10;
+        hero.Stats["MP"] -= 10;
     }
 }

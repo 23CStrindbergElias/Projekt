@@ -12,6 +12,6 @@ public class Fireball : OffenseSpells
     {
         Console.WriteLine($"{hero} använde Fireball!");
         enemy.HP -= 15;
-        hero.MP -= 5;
+        hero.Stats["MP"] -= 5;
     }
 }

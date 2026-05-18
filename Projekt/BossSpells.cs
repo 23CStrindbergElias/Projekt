@@ -8,6 +8,6 @@ public class BossSpells
     {
         Console.WriteLine($"Boss använde {Name}");
         enemy.MP -= 10;
-        hero.HP -= 15;
+        hero.Stats["HP"] -= 15;
     }
 }

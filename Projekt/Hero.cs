@@ -3,14 +3,16 @@ using Projekt;
 public class Hero
 {
     // Allmäna variabler
+
+
     public string Name;
-    public int HP;
-    public int AP;
-    public int MP;
+
 
     public string description;
 
-    // Listor
+    // Generiska klasser
+    Dictionary<string, string> HeroName = new Dictionary<string, string>();
+    public Dictionary<string, int> Stats = new Dictionary<string, int>();
     public List<string> Moves = ["Attack", "Spells", "Do nothing"];
     public List<DefenceSpells> DefenceSpells = [];
     public List<OffenseSpells> OffenseSpells = [];

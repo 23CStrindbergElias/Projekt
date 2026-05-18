@@ -11,6 +11,6 @@ public class Icestorm : BossSpells
     public override void Use(Enemy enemy, Hero hero)
     {
         Console.WriteLine($"Boss använde {Name}");
-        hero.HP -= 10;
+        hero.Stats["HP"] -= 10;
     }
 }

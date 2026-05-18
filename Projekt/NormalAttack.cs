@@ -11,6 +11,6 @@ public class NormalAttack : Ability
     public override void Use(Hero hero, Enemy enemy)
     {
         Console.WriteLine($"{hero} använde Normal Attack!");
-        enemy.HP -= hero.AP;
+        enemy.HP -= hero.Stats["AP"];
     }
 }
