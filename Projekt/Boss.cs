@@ -2,7 +2,10 @@ using Projekt;
 
 public class Boss : Enemy
 {
+    // Lista med spells som boss kan använda
     public List<BossSpells> bossSpells = [];
+
+    // Ger värden och lägger till spells i listan ovan
     public Boss()
     {
         Name = "Boss";
@@ -14,6 +17,7 @@ public class Boss : Enemy
         bossSpells.Add(new Icestorm());
     }
 
+    // Slumpar fram ett move i listan bossSpells och använder den på hero som är target
     public void BossTurn(Hero hero)
     {
         int r = Random.Shared.Next(0, bossSpells.Count);

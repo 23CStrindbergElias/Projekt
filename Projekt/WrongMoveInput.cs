@@ -2,6 +2,7 @@ public class WrongMoveInput
 {
     public  Hero ChoosePartyMember(List<Hero> party)
     {
+        // Om man väljer fel kan man välja igen
         Console.WriteLine("Välj en av:");
 
         for (int i = 0; i < party.Count; i++)
