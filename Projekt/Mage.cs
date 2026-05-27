@@ -3,7 +3,7 @@ public class Mage : Hero
     public Mage()
     {
         // En description för att visa för spelaren vad karaktären är bra på samt namn under
-        description = "The Mage is skilled in magical combat. He excells in offensive magic. He may also attack using is wand, although not that effective.";
+        // description = "The Mage is skilled in magical combat. He excells in offensive magic. He may also attack using is wand, although not that effective.";
         Name = "Mage";
 
         // Dictionary används för att underlätta när värden läggs till, lättare att lagra

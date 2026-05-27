@@ -3,7 +3,14 @@ public class Warrior : Hero
     public Warrior()
     {
         // Kort description om valet av karaktär 
-        description = "The warrior is an allround useful character for all situation. He has a balance of good HP and high AP. A must for any party.";
+        string description123;
+
+        SetDesc("The warrior is an allround useful character for all situation. He has a balance of good HP and high AP. A must for any party.");
+        
+        description123 = GetDesc();
+        
+        
+        
         Name = "Warrior";
 
         // Lägger till i dictionary som heter Stats, ser mer snyggt ut och lagrar information bra

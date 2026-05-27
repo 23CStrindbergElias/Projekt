@@ -3,8 +3,27 @@ using Projekt;
 public class Hero
 {
     // Allmäna variabler
-    public string Name;
-    public string description;
+    public string Name {get; protected set;}
+
+    private string description;
+
+    public void SetDesc(string Beskrivning)
+    {
+        description = Beskrivning;
+        
+    }
+
+    public string GetDesc()
+    {
+        return description;
+    }
+
+
+
+
+
+
+
 
     // Generiska klasser: list och dictionary
     Dictionary<string, string> HeroName = new Dictionary<string, string>();
@@ -23,6 +42,7 @@ public class Hero
         for (int i = 0; i < Moves.Count; i++)
         {
             Console.WriteLine($"{i + 1}) {Moves[i]}");
+            
         }
     }
 

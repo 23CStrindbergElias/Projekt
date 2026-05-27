@@ -5,7 +5,7 @@ public class Priest : Hero
     public Priest()
     {
         // Kort description om valet av karaktär 
-        description = "The Priest is a defensive focused character. He's focused around healing and buffing his fellow member of the party.";
+        // description = "The Priest is a defensive focused character. He's focused around healing and buffing his fellow member of the party.";
         Name = "Priest";
 
         // Lägger till i dictionary som heter Stats, ser mer snyggt ut och lagrar information bra

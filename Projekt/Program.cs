@@ -19,6 +19,8 @@ Bossfight fight = new();
 
 Your_Party = chooser.ChooseParty(3);
 
+
+
 fight.NewFight(Your_Party);
 
 Console.ReadLine();

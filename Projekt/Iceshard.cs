@@ -1,12 +1,11 @@
 using Projekt;
 
-public class Iceshard : OffenseSpells
+class Iceshard : OffenseSpells
 {
     // Ny instans samt namn på spell
     public Iceshard()
     {
         Name = "Iceshard";
-        
     }
 
     // metod för att använda spell på enemy, det är offensive vilket gör att target är enemy. 

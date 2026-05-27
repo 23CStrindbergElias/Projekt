@@ -3,7 +3,7 @@ namespace Projekt;
 public class BossSpells
 {
     // Namnet av spell
-    public string Name;
+    public string Name {get; protected set;}
 
     // Drar av värden från designerade variabler, fungerar som självaste attacken
     public virtual void Use(Enemy enemy, Hero hero)
